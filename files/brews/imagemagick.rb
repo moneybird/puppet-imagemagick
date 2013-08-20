@@ -68,7 +68,7 @@ class Imagemagick < Formula
     end
 
     args << "--with-quantum-depth=#{quantum_depth}" if quantum_depth
-    args << "--with-rsvg" #if build.with? 'rsvg'
+    args << "--with-rsvg" if build.with? 'rsvg'
     args << "--without-x" unless build.with? 'x'
     args << "--with-fontconfig=yes" if build.with? 'fontconfig' or MacOS::X11.installed?
     args << "--with-freetype=yes" if build.with? 'freetype' or MacOS::X11.installed?
