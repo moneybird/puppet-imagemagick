@@ -18,6 +18,7 @@ class imagemagick {
       require => Class['xquartz'] ;
     'boxen/brews/imagemagick':
       ensure  => $imagemagick::config::version,
-      require => Class['xquartz'] ;
+      require => Class['xquartz'],
+      require => Class['librsvg'] ;
   }
 }
